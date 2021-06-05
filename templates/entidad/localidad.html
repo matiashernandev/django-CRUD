@@ -1,0 +1,18 @@
+<html>
+  <title>Lista de localidades</title>
+
+  <table style="border: 2px solid">
+    <thead>
+      <tr>
+        <th>Código postal</th>
+        <th>Localidad</th>
+      </tr>
+    </thead>
+    {% for i in localidades %}
+    <tr>
+      <td>{{ i.cp }}</td>
+      <td>{{ i.nombre_l }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</html>

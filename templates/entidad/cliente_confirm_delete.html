@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+{% block titulo %} Eliminar Cliente AA {% endblock %}
+{% block contenido %}
+    <form method="POST">
+      {% csrf_token%} ¿Está seguro de eliminar el cliente??????<br /><br />
+
+      <input type="submit" value="Corfirmar" /><br /><br />
+      <a href="{% url 'index' %}">Volver</a>
+    </form>
+{% endblock %}

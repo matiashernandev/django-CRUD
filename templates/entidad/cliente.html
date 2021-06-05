@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block titulo %}Lista de clientes {% endblock %}
+{% block titulo2 %} Administracion {% endblock %}
+{% block contenido %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Apellido </th>
+                    <th> Nombre </th>
+                    <th> Editar </th>
+                    <th> Borrar </th>
+                </tr>
+            </thead>
+            {% for cliente in clientes %}
+                <tr>
+                    <td>{{ cliente.apellido }}</td>
+                    <td>{{ cliente.nombre }}</td>
+                    <td><a href="{% url "editarcliente" cliente.id %}"><img src="{{ STATIC_URL }}images/Editar_25.png"> </a> </td>
+                    <td><a href="{% url "borrarcliente" cliente.id %}"><img src="{{ STATIC_URL }}images/Eliminar_25.png"> </a> </td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+{% block titulo %}Página principal del coso este de
+práctica utilizando template sarasa {% endblock %} 
+
+{% block contenido %}
+
+{% comment %} <input type="submit" href="/entidad/nuevocliente" value="Cargar Cliente" class="btn btn-success" /> {% endcomment %}
+
+
+<div class="d-grid gap-2 col-6 mx-auto">
+<a href="/entidad/nuevocliente" class="btn btn-primary">Cargar nuevo cliente</a>
+<a href="/entidad/cliente" class="btn btn-primary">Listar clientes</a>
+</div>
+{% endblock %}

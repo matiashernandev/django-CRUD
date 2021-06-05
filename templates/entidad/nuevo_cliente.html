@@ -1,0 +1,15 @@
+{% extends "base.html" %} 
+{% block titulo %} Administración de clientes {% endblock %} 
+{% block titulo2 %} Cargar/editar {% endblock %} 
+
+{% block contenido %}
+    <form method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-sm-5">
+          {{ form.as_p }}
+          <input type="submit" value="Cargar Cliente" class="btn btn-success" />
+        </div>
+      </div>
+    </form>
+{% endblock %}
